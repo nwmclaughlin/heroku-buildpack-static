@@ -38,7 +38,7 @@ done
 
 # install apache if needed
 if [ ! -d $APACHE_PATH ]; then
-  APACHE_URL="http://apache.mirror.serversaustralia.com.au/httpd/httpd-2.2.31.tar.gz"
+  APACHE_URL="https://archive.apache.org/dist/httpd/httpd-$APACHE_VERSION.tar.gz"
   echo "-----> Bundling Apache v$APACHE_VERSION"
   curl --silent --max-time 60 --location $APACHE_URL | tar xz
 fi
