@@ -5,7 +5,7 @@
 set -e
 
 # config
-APACHE_VERSION="2.2.19"
+APACHE_VERSION="2.2.27"
 APACHE_PATH="apache"
 
 BIN_DIR=$(dirname $0)
@@ -38,7 +38,7 @@ done
 
 # install apache if needed
 if [ ! -d $APACHE_PATH ]; then
-  APACHE_URL="https://archive.apache.org/dist/httpd/httpd-$APACHE_VERSION.tar.gz"
+  APACHE_URL="https://s3.amazonaws.com/heroku-erickthered/apache-2.2.27.tar.bz2"
   echo "-----> Bundling Apache v$APACHE_VERSION"
   curl --silent --max-time 60 --location $APACHE_URL | tar xz
 fi
