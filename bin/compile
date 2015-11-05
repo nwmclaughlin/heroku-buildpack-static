@@ -40,7 +40,7 @@ done
 if [ ! -d $APACHE_PATH ]; then
   APACHE_URL="https://s3.amazonaws.com/heroku-erickthered/apache-2.2.27.tar.bz2"
   echo "-----> Bundling Apache v$APACHE_VERSION"
-  curl --silent --max-time 60 --location $APACHE_URL | tar xz
+  curl --silent --max-time 60 --location "$APACHE_URL" | tar xj
 fi
 
 # update config files
